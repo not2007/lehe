@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0039)http://wap.xingxiayu.com/d/index2.html# -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>乐呵抓娃娃</title>
+<style type="text/css">
+<!--
+*{ margin:0; padding:0}
+li{list-style: none;}
+#header,#content,#footer,#ico1a,#ico2b{ width:1200px; margin:auto}
+#header #logo{ padding:20px 0}
+#header #logo img{ width:200px; height:auto}
+#footer{ border-top:30px #fff solid; padding:30px 0; background-color:#333; color:#fff; font-size:14px; text-align:center; line-height:40px}
+.cang{ background-color:#666; position:absolute; height:100%; width:100%;
+    background-color: rgba(0,0,0,0.5); display:none}
+.cang img{ width:100%; height:auto; position:relative}
+.s-wrap{
+    overflow: hidden;
+    background: #f86241;
+}
+.s-wrap .ll{
+    float: left;
+    margin-left:30px;
+}
+.s-wrap .s-code{
+    float: right;
+}
+
+-->
+</style>
+</head>
+
+<body>
+<div id="header">
+	<div id="logo"><img src="./img/logo.png"></div>
+</div>
+<div id="content">
+    <div id="ico1a" class="cang"><img src="./img/you.png"></div>
+    <div id="ico2b" class="cang"><img src="./img/dai.png"></div>
+	<div class="n">
+        <div>
+            <img src="./img/a01.jpg">
+            <img src="./img/a02.jpg">
+        </div>
+        <div class="s-wrap">
+            <ul class="ll">
+                <!--安卓-->
+               <li><a id="ico2" href="http://down.sapdw.cn/wawa/wawa.apk"><img src="./img/android.jpg"></a></li>
+            <!--ios-->
+               <li> <a id="ico1" href="http://wap.xingxiayu.com/d/index2.html#"><img src="./img/ios.jpg"></a></li>
+            </ul>
+            <img src="./img/code.jpg" class="s-code">
+        </div>
+        <img src="./img/a04.jpg">
+    </div>
+    <div class="n">
+    	<img src="./img/b01.jpg">
+        <img src="./img/b02.jpg">
+    </div>
+    <div class="n">
+    	<img src="./img/c01.jpg">
+        <img src="./img/c02.jpg">
+    </div>
+    <div class="n">
+    	<img src="./img/d01.jpg">
+        <img src="./img/d02.jpg">
+    </div>
+</div>
+<div id="footer">宜昌圆梦科技有限公司 © 2018 YUANMENG All Rights Reserved.<br>
+联系我们：wangyimin2021@icloud.com</div>
+
+<script src="jquery.min.js"></script>
+<script>
+    function isWeiXin() {
+        var ua = window.navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function HasTouch() {
+        return "ontouchend" in document ? true : false;
+    }
+    var istouch = HasTouch();
+    var iswx = isWeiXin();
+
+    $("#ico2").click(function(){
+        if(istouch && iswx){
+            $("#ico1a").show();
+        }
+    });
+
+    $("#ico1").click(function(){
+        $("#ico2b").show();
+    });
+    $(".cang").click(function(){
+        $(this).hide();
+    });
+</script>
+
+</body></html>
